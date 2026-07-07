@@ -4,4 +4,9 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-pantone-sage: #96B4A8;
+  --color-pantone-red: #DF4126;
+  --color-pantone-cream: #FFF5CB;
+  --color-pantone-teal: #3B6774;
 }

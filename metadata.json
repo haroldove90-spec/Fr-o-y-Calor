@@ -1,5 +1,5 @@
 {
-  "name": "Servicio Técnico Aire Acondicionado",
+  "name": "Calor y Frío",
   "description": "Aplicación móvil para la gestión de servicios técnicos de aire acondicionado, con diagnóstico inteligente por IA, cálculo de BTUs y reserva de citas.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

@@ -1,0 +1,35 @@
+{
+  "short_name": "Calor y Frío",
+  "name": "Calor y Frío - Climas y Climatización",
+  "icons": [
+    {
+      "src": "https://appdesignproyectos.com/caloryfrioicono.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://appdesignproyectos.com/caloryfrioicono.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://appdesignproyectos.com/caloryfrioicono.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://appdesignproyectos.com/caloryfrioicono.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "display": "standalone",
+  "orientation": "portrait"
+}

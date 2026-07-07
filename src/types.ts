@@ -31,8 +31,16 @@ export interface Appointment {
   timeSlot: string;
   details: string;
   status: AppointmentStatus;
+  technicianId?: string;
+  technicianName?: string;
   technicianNotes?: string;
   createdAt: string;
+  
+  // Campo de técnico
+  serviceState?: 'En Camino' | 'En Proceso' | 'Terminado';
+  beforePhoto?: string;
+  afterPhoto?: string;
+  materialsUsed?: { itemId: string; name: string; qty: number }[];
 }
 
 export interface ChatMessage {
@@ -50,4 +58,80 @@ export interface BTUMeasurements {
   occupants: number;
   electricalDevices: number;
   climateZone: 'warm' | 'temperate' | 'tropical';
+}
+
+// 🔴 Rol 1: Administrador Types
+export interface Employee {
+  id: string;
+  name: string;
+  role: 'admin' | 'coordinator' | 'technician';
+  permissions: string[];
+  completedServices: number;
+  status: 'active' | 'inactive';
+}
+
+export interface CatalogPrice {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+}
+
+export interface InventoryItem {
+  id: string;
+  name: string;
+  code: string;
+  stock: number;
+  unit: string;
+  price: number;
+}
+
+// 🟡 Rol 2: Coordinador / Recepción Types
+export interface Client {
+  id: string;
+  name: string;
+  phone: string;
+  address: string;
+  source: string; // "Llegó por Facebook", etc
+  registeredAt: string;
+}
+
+export interface Quote {
+  id: string;
+  clientName: string;
+  clientPhone: string;
+  clientAddress: string;
+  servicesSelected: { name: string; price: number }[];
+  total: number;
+  status: 'pending' | 'accepted' | 'rejected';
+  createdAt: string;
+}
+
+export interface CajaChicaLog {
+  id: string;
+  type: 'income' | 'expense';
+  amount: number;
+  concept: string;
+  date: string;
+  status: 'pending_validation' | 'validated';
+}
+
+// 🟢 Rol 3: Técnico Types
+export interface RouteExpense {
+  id: string;
+  technicianId: string;
+  technicianName: string;
+  amount: number;
+  category: 'Combustible' | 'Peaje' | 'Refacción Emergencia' | 'Otro';
+  description: string;
+  date: string;
+  receiptPhoto?: string;
+}
+
+export interface AuditLog {
+  id: string;
+  user: string;
+  role: string;
+  action: string;
+  timestamp: string;
 }
